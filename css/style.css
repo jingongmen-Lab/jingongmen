@@ -40,7 +40,7 @@
   /* 内容区整体居中、限宽，几乎所有官网的通用做法 */
   main {
     max-width: 1200px;
-    margin: 10 auto;                  /* 上下 0，左右 auto = 自动均分 = 居中 */
+    margin: 0 auto;                  /* 上下 0，左右 auto = 自动均分 = 居中 */
     padding: 60px;
   }
   
@@ -52,7 +52,7 @@
     color: #ffffff;
   }
 /* ===== 响应式：窄屏（600px 及以下）适配 ===== */
-@media (min-width: 900px) {
+@media (max-width: 900px) {
     .site-header {
       flex-direction: column;  /* 公司名和导航改上下排列 */
       gap: 10px;               /* 两者之间留 10px 间距 */
@@ -80,6 +80,7 @@
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);  /* 文字阴影，保证亮图上可读 */
   }
   /* 全站图片保险：最大不超过父容器宽度，等比缩小 */
+  img { max-width: 100%; } 
   .news-img {
     width: 100%;
     aspect-ratio: 16 / 9;   /* 宽:高 = 16:9，高度自动算出 */
