@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ===== 页头：公司名 + 导航 ===== */
+  .site-header {
+    background-color: #1a3c1a;
+    padding: 15px 40px;
+    display: flex;                   /* 启用 Flexbox，子元素横排 */
+    justify-content: center;  /* 主轴（横向）两端对齐 */
+    align-items: center;             /* 交叉轴（纵向）居中 */
+  }
+  
+  .site-header h1 {
+    color: #ffffff;
+    font-size: 24px;
+  }
+  
+  /* 导航链接：白色、去下划线、留间距 */
+  .site-nav a {
+    color: #ffffff;
+    text-decoration: none;           /* 去掉链接默认下划线 */
+    margin-left: 40px;               /* 链接之间的间距 */
+  }
+  
+  /* 鼠标悬停反馈：透明度 80%，产生“可点击”暗示 */
+  .site-nav a:hover {
+    opacity: 0.8;
+  }
+  
+  /* ===== 主体内容 ===== */
+  body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #f4f8f4;
+    color: #333333;
+  }
+  
+  /* 内容区整体居中、限宽，几乎所有官网的通用做法 */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;                  /* 上下 0，左右 auto = 自动均分 = 居中 */
+    padding: 60px;
+  }
+  
+  /* ===== 页脚 ===== */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2d5a27;
+    color: #ffffff;
+  }
+/* ===== 响应式：窄屏（600px 及以下）适配 ===== */
+@media (max-width: 600px) {
+    .site-header {
+      flex-direction: column;  /* 公司名和导航改上下排列 */
+      gap: 10px;               /* 两者之间留 10px 间距 */
+    }
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;         /* 一行放不下自动换行 */
+      justify-content: center; /* 导航整体居中 */
+    }
+    .site-nav a {
+      margin: 4px 10px;        /* 间距收紧 */
+    }
+    main {
+      padding: 20px;           /* 窄屏时内容边距减小 */
+    }
+  }
+  /* ===== 首页英雄区 ===== */
+.hero {
+    background-image: url("../images/hero.jpg");
+    background-size: cover;        /* 图按比例放大铺满区域，多余部分裁掉 */
+    background-position: center;   /* 裁切时保留图片中心部位 */
+    padding: 220px 40px;           /* 用内边距撑出横幅高度 */
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);  /* 文字阴影，保证亮图上可读 */
+  }
+  /* 全站图片保险：最大不超过父容器宽度，等比缩小 */
+  img { max-width: 100%; } 
+  .news-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;   /* 宽:高 = 16:9，高度自动算出 */
+    object-fit: cover;
+  }
+  figure {
+    margin: 0;              /* figure 有浏览器默认外边距，重置掉 */
+  }
+  
+  .news-figure figcaption {
+    text-align: center;     /* 图注居中 */
+    color: #777777;         /* 灰色，比正文浅一档，符合图注的“配角”气质 */
+    font-size: 14px;        /* 比正文小一号 */
+    margin-top: 8px;        /* 和图片拉开一点距离 */
+  }
