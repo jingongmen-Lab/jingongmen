@@ -1,42 +1,84 @@
-<!DOCTYPE html>              <!-- 声明：这是一份 HTML5 文档，固定写法 -->
-<html lang="zh-CN">          <!-- 网页整体开始，lang 表示内容是简体中文 -->
-  <head>              <!-- 头部：给浏览器看的配置信息，访客看不到 -->
-    <meta charset="UTF-8">   <!-- 文字编码，保证中文不乱码 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>興農動態</title>  <!-- 浏览器标签页上显示的标题 -->
+    <title>新闻动态 - 兴农科技</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="site-header">
-        <h1>兴农科技</h1>
-        <nav class="site-nav">
-          <a href="index.html">首页</a>
-          <a href="about.html">关于我们</a>
-          <a href="solutions.html">解决方案</a>
-          <a href="news.html">新闻动态</a>
-          <a href="contact.html">联系我们</a>
-        </nav>
-      </header>
-    <!-- 主体内容 -->
-    <main>
-      <section>
-        <h2>公司合作动向</h2>
-        <p>兴农科技携手北上大米开展超大型收割机研发</p>
-        <p>兴农科技助力广粮进行大田实验</p>
-        <figure class="news-figure">
-            <img class="news-img" src="images/hero.jpg" alt="广西崇左的茶山梯田航拍">
-            <figcaption>广西崇左山区茶山航拍</figcaption>
-          </figure>
-      </section>
+      <h1>兴农科技</h1>
+      <nav class="site-nav">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="solutions.html">解决方案</a>
+        <a href="news.html">新闻动态</a>
+        <a href="contact.html">联系我们</a>
+      </nav>
+    </header>
 
-      <section>
-        <h2>公司内成长动态</h2>
-        <p>公司新一届董事会成员换届选举进行中</p>
-        <p>兴农科技三季度优秀员工评选公示</p>
-      </section>
+    <main>
+      <h2>新闻动态</h2>
+      <div class="news-grid">
+
+        <article class="news-card">
+          <img class="news-img" src="images/hero.jpg" alt="广西崇左的茶山梯田航拍">
+          <div class="news-card-body">
+            <h3>兴农科技助力广粮开展大田实验</h3>
+            <p>近日，兴农科技与广粮达成合作，在崇左山区开展水稻大田实验，用传感器数据指导灌溉与施肥。</p>
+            <span class="news-date">2026-10-20</span>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img class="news-img" src="images/hero.jpg" alt="收割机研发配图">
+          <div class="news-card-body">
+            <h3>携手北上大米研发超大型收割机</h3>
+            <p>双方将联合攻关智能收割装备，提升丘陵地区作业效率。</p>
+            <span class="news-date">2026-10-12</span>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img class="news-img" src="images/hero.jpg" alt="公司会议配图">
+          <div class="news-card-body">
+            <h3>公司新一届董事会成员换届选举进行中</h3>
+            <p>换届选举工作正按章程有序推进，结果将另行公示。</p>
+            <span class="news-date">2026-09-28</span>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img class="news-img" src="images/hero.jpg" alt="优秀员工表彰配图">
+          <div class="news-card-body">
+            <h3>兴农科技三季度优秀员工评选公示</h3>
+            <p>经各部门推荐与评审，三季度优秀员工名单进入公示期。</p>
+            <span class="news-date">2026-09-15</span>
+          </div>
+        </article>
+
+        <article class="news-card">
+            <img class="news-img" src="images/hero.jpg" alt="优秀员工表彰配图">
+            <div class="news-card-body">
+              <h3>兴农科技最美味食堂评选</h3>
+              <p>经各部门推荐与评审，三季度美味食堂进入打折期。</p>
+              <span class="news-date">2026-09-15</span>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img class="news-img" src="images/hero.jpg" alt="优秀员工表彰配图">
+            <div class="news-card-body">
+              <h3>兴农科技最整洁公厕评选</h3>
+              <p>经各部门推荐与评审，三季度最优秀厕所进入展示期。</p>
+              <span class="news-date">2026-09-15</span>
+            </div>
+          </article>
+
+      </div>
     </main>
 
-    <!-- 页脚 -->
     <footer>
       <p>© 2026 兴农科技 · 练手项目</p>
     </footer>
