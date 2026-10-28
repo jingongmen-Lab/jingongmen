@@ -6,6 +6,7 @@
     <title>联系我们-兴农科技</title>  <!-- 浏览器标签页上显示的标题 -->
     <link rel="stylesheet" href="css/style.css">
   </head>
+  
   <body>
     <header class="site-header">
         <h1>兴农科技</h1>
@@ -18,21 +19,25 @@
         </nav>
       </header><!-- 主体内容 -->
     <main>
-      <section>
-        <h2>公司联系方式</h2>
-        <p>官网地址:http//qyn.com</p>
-        <p>公司邮箱:qyn@163.com</p>
-      </section>
-      <section>
-        <h2>公司办公地址</h2>
-        <p>西鸿市:西红柿大厦8楼888号</p>
-        <p>南京市:玄六区西方亮大厦16楼1608室 </p>
-      </section>
+        <h2>联系我们</h2>
+        <form class="contact-form">
+          <label for="name">姓名</label>
+          <input type="text" id="name" placeholder="请输入您的姓名" autocomplete="name">
+  
+          <label for="phone">电话</label>
+          <input type="tel" id="phone" placeholder="请输入手机号" autocomplete="tel">
+  
+          <label for="message">留言内容</label>
+          <textarea id="message" rows="4" placeholder="想对我们说的话"></textarea>
+  
+          <button type="submit">提交留言</button>
+        </form>
     </main>
 
     <!-- 页脚 -->
     <footer>
       <p>© 2026 兴农科技 · 练手项目</p>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
