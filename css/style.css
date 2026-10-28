@@ -128,3 +128,75 @@
     transform: translateY(-4px);   /* 新函数：向上位移 4px */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
+  /* 导航当前页高亮 */
+.site-nav a.active {
+    border-bottom: 2px solid #ffffff;  /* 底部白色横线 */
+    padding-bottom: 4px;
+  }
+  /* ===== 灯箱 ===== */
+.lightbox {
+    display: none;                /* 默认隐身 */
+    position: fixed;              /* 钉在浏览器窗口上，滚动也不动 */
+    inset: 0;                     /* 四边贴边 = 铺满全屏 */
+    background-color: rgba(0, 0, 0, 0.8);  /* 80% 不透明的黑幕 */
+    justify-content: center;      /* 以下三行：Flexbox 居中大图 */
+    align-items: center;
+    z-index: 999;                 /* 压在页头页脚等所有内容之上 */
+    cursor: pointer;              /* 提示：点我可以关闭 */
+  }
+  
+  .lightbox.open {
+    display: flex;                /* 有 open 类时显身，大图居中 */
+  }
+  
+  .lightbox img {
+    max-width: 90%;               /* 不顶满，留黑边喘息 */
+    max-height: 90%;
+    border-radius: 8px;
+  }
+  
+  /* 小图可点的暗示 */
+  .news-img {
+    cursor: pointer;
+  }
+  .lightbox.open {
+    display: flex;
+    animation: fadeIn 0.3s;    /* open 时播放名为 fadeIn 的动画 */
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }       /* 起始帧：全透明 */
+    to   { opacity: 1; }       /* 结束帧：不透明 */
+  }
+  /* ===== 留言簿 ===== */
+.contact-form {
+    max-width: 500px;        /* 簿子别太宽，一行字读着累 */
+  }
+  
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea {
+    display: block;          /* 各占一行，从上往下排 */
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .contact-form button {
+    background-color: #2d5a27;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    opacity: 0.9;
+  }
